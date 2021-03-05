@@ -17,6 +17,7 @@
 		2DCD954D1E0B4F2C00145EB5 /* GeoNotesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* GeoNotesTests.m */; };
 		2FBA5E9A5C658A870E823372 /* libPods-GeoNotes-GeoNotesTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E95C9DECF8BF5D81759A4F /* libPods-GeoNotes-GeoNotesTests.a */; };
 		78DE6E0525EEA52C00E1EE9C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78DE6E0425EEA52C00E1EE9C /* GoogleService-Info.plist */; };
+		78E7F38025F18F9700716C1B /* geolocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E7F37F25F18F9700716C1B /* geolocation.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		8A2193FF2440F72268A6FD57 /* libPods-GeoNotes-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33CC76D783907050711D41F8 /* libPods-GeoNotes-tvOSTests.a */; };
 		A0916389F0E62C7D0A8957D7 /* libPods-GeoNotes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCBD00782B67B9CE45FF94D /* libPods-GeoNotes.a */; };
@@ -63,6 +64,8 @@
 		5B775185F61BEF6F00E61020 /* Pods-GeoNotes-GeoNotesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoNotes-GeoNotesTests.debug.xcconfig"; path = "Target Support Files/Pods-GeoNotes-GeoNotesTests/Pods-GeoNotes-GeoNotesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		70E95C9DECF8BF5D81759A4F /* libPods-GeoNotes-GeoNotesTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GeoNotes-GeoNotesTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78DE6E0425EEA52C00E1EE9C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		78E7F37E25F18F9700716C1B /* GeoNotes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GeoNotes-Bridging-Header.h"; sourceTree = "<group>"; };
+		78E7F37F25F18F9700716C1B /* geolocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = geolocation.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = GeoNotes/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96B124249EF0974F756B2625 /* Pods-GeoNotes-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoNotes-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-GeoNotes-tvOSTests/Pods-GeoNotes-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		D72DFD1A875EA6D576E100B5 /* Pods-GeoNotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoNotes.release.xcconfig"; path = "Target Support Files/Pods-GeoNotes/Pods-GeoNotes.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +164,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				78E7F37F25F18F9700716C1B /* geolocation.swift */,
 				78DE6E0425EEA52C00E1EE9C /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* GeoNotes */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
@@ -168,6 +172,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				E6C8C89676933F1C60848A9A /* Pods */,
+				78E7F37E25F18F9700716C1B /* GeoNotes-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -296,7 +301,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1240;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -577,6 +582,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				78E7F38025F18F9700716C1B /* geolocation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,6 +623,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B775185F61BEF6F00E61020 /* Pods-GeoNotes-GeoNotesTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -640,6 +647,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E8EF0C14BB4DBE9D7E2C6A70 /* Pods-GeoNotes-GeoNotesTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = GeoNotesTests/Info.plist;
@@ -673,6 +681,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = GeoNotes;
+				SWIFT_OBJC_BRIDGING_HEADER = "GeoNotes-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -695,6 +704,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = GeoNotes;
+				SWIFT_OBJC_BRIDGING_HEADER = "GeoNotes-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
